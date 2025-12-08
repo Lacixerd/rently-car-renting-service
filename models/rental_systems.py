@@ -16,14 +16,14 @@ class RentalSystem:
 
         valid, mesaj = ValidationService.validate_plaka(plaka)
         if not valid:
-            return False, f"Hata: {mesaj}"
+            return False, f"{mesaj}"
         
         if self.arac_bul(plaka):
-            return False, "Hata: Bu plaka zaten sistemde kayıtlı."
+            return False, "Bu plaka zaten sistemde kayıtlı."
         
         valid_ucret, return_value = ValidationService.validate_ucret(ucret)
         if not valid_ucret:
-            return False, f"Hata: {return_value}"
+            return False, f"{return_value}"
         
         ucret = return_value
         yeni_arac = Arac(plaka, marka, model, ucret)
@@ -33,10 +33,10 @@ class RentalSystem:
     def arac_sil(self, plaka):
         arac = self.arac_bul(plaka)
         if not arac:
-            return False, "Hata: Silinecek araç bulunamadı."
+            return False, "Silinecek araç bulunamadı."
         
         if arac.durum == "kirada":
-            return False, "Hata: Kirada olan bir araç silinemez!"
+            return False, "Kirada olan bir araç silinemez!"
 
         self.araclar.remove(arac)
         return True, "Araç başarıyla sistemden kaldırıldı."
@@ -44,11 +44,11 @@ class RentalSystem:
     def arac_guncelle(self, plaka, marka, model, ucret):
         arac = self.arac_bul(plaka)
         if not arac:
-            return False, "Hata: Güncellenecek araç bulunamadı."
+            return False, "Güncellenecek araç bulunamadı."
         
         valid_ucret, return_value = ValidationService.validate_ucret(ucret)
         if not valid_ucret:
-            return False, f"Hata: {return_value}"
+            return False, f"{return_value}"
 
         arac.marka = marka
         arac.model = model
@@ -61,17 +61,17 @@ class RentalSystem:
     def kiralama_baslat(self, plaka, kiralayan, baslangic_str, bitis_str):
         arac = self.arac_bul(plaka)
         if not arac:
-            return False, "Hata: Araç bulunamadı."
+            return False, "Araç bulunamadı."
         if arac.durum != "müsait":
-            return False, f"Hata: Araç şu anda '{arac.durum}' durumunda."
+            return False, f"Araç şu anda '{arac.durum}' durumunda."
 
         valid_musteri_adi, mesaj = ValidationService.validate_musteri_adi(kiralayan)
         if not valid_musteri_adi:
-            return False, f"Hata: {mesaj}"
+            return False, f"{mesaj}"
 
         valid_tarih_araligi, mesaj, baslangic, bitis = ValidationService.validate_tarih_araligi(baslangic_str, bitis_str)
         if not valid_tarih_araligi:
-            return False, f"Hata: {mesaj}"
+            return False, f"{mesaj}"
 
         gun_farki = (bitis - baslangic).days
         toplam_ucret = arac.ucret_hesapla(gun_farki)
@@ -87,9 +87,9 @@ class RentalSystem:
     def arac_iade_et(self, plaka):
         arac = self.arac_bul(plaka)
         if not arac:
-            return False, "Hata: İade edilecek araç bulunamadı."
+            return False, "İade edilecek araç bulunamadı."
         if arac.durum != "kirada":
-            return False, f"Hata: Araç kirada değil, durumu '{arac.durum}'."
+            return False, f"Araç kirada değil, durumu '{arac.durum}'."
         
         try:
             baslangic = datetime.strptime(arac.baslangic_tarihi, '%d-%m-%Y')
@@ -99,7 +99,7 @@ class RentalSystem:
             toplam_ucret = arac.ucret_hesapla(gun_farki) 
             iade_tarihi = datetime.now().strftime('%d-%m-%Y')
         except ValueError:
-             return False, "Hata: Kayıtlı tarih formatında sorun var."
+             return False, "Kayıtlı tarih formatında sorun var."
 
         gecmis_kaydi = {
             "plaka": arac.plaka,

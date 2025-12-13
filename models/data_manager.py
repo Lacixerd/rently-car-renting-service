@@ -5,7 +5,7 @@ class DataManager:
     # her data manager bir obje olarak tanımlanıyor nedeni de her bir datamanager dosya
     # işlemlerini kendi içerisinde yapıyor başka yerler doğrudan dosya işlemleri yapılmıyor
     # yani encapsulation yapıyoruz
-    def __init__(self, dosya_adi="./cars.json", gecmis_dosya_adi="./rental_history.json"):
+    def __init__(self, dosya_adi="./data/cars.json", gecmis_dosya_adi="./data/rental_history.json"):
         self.dosya_adi = dosya_adi
         self.gecmis_dosya_adi = gecmis_dosya_adi
         self.araclar = [] 

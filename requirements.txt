@@ -1,2 +1,3 @@
 babel==2.17.0
+customtkinter
 tkcalendar==1.6.1

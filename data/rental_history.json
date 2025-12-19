@@ -1,0 +1,57 @@
+[
+    {
+        "plaka": "34ABC123",
+        "marka": "BMW",
+        "model": "320i",
+        "ucret": 850.0,
+        "kiralayan": "Mehmet Kaya",
+        "baslangic_tarihi": "01-12-2025",
+        "bitis_tarihi": "05-12-2025",
+        "toplam_ucret": 3400.0,
+        "iade_tarihi": "05-12-2025"
+    },
+    {
+        "plaka": "35DEF789",
+        "marka": "Audi",
+        "model": "A4",
+        "ucret": 900.0,
+        "kiralayan": "Zeynep Çelik",
+        "baslangic_tarihi": "03-12-2025",
+        "bitis_tarihi": "10-12-2025",
+        "toplam_ucret": 6300.0,
+        "iade_tarihi": "10-12-2025"
+    },
+    {
+        "plaka": "16GHI012",
+        "marka": "Volkswagen",
+        "model": "Passat",
+        "ucret": 650.0,
+        "kiralayan": "Can Özdemir",
+        "baslangic_tarihi": "05-12-2025",
+        "bitis_tarihi": "08-12-2025",
+        "toplam_ucret": 1950.0,
+        "iade_tarihi": "08-12-2025"
+    },
+    {
+        "plaka": "41JKL345",
+        "marka": "Renault",
+        "model": "Megane",
+        "ucret": 450.0,
+        "kiralayan": "Elif Şahin",
+        "baslangic_tarihi": "10-12-2025",
+        "bitis_tarihi": "12-12-2025",
+        "toplam_ucret": 900.0,
+        "iade_tarihi": "12-12-2025"
+    },
+    {
+        "plaka": "07MNO678",
+        "marka": "Toyota",
+        "model": "Corolla",
+        "ucret": 550.0,
+        "kiralayan": "Burak Arslan",
+        "baslangic_tarihi": "08-12-2025",
+        "bitis_tarihi": "14-12-2025",
+        "toplam_ucret": 3300.0,
+        "iade_tarihi": "14-12-2025"
+    }
+]

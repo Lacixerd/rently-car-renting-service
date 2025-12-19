@@ -1,0 +1,62 @@
+[
+    {
+        "plaka": "34ABC123",
+        "marka": "BMW",
+        "model": "320i",
+        "ucret": 850.0,
+        "durum": "m\u00fcsait",
+        "kiralayan": "",
+        "baslangic_tarihi": "",
+        "bitis_tarihi": ""
+    },
+    {
+        "plaka": "06XYZ456",
+        "marka": "Mercedes",
+        "model": "C180",
+        "ucret": 950.0,
+        "durum": "kirada",
+        "kiralayan": "Ahmet Y\u0131lmaz",
+        "baslangic_tarihi": "15-12-2025",
+        "bitis_tarihi": "22-12-2025"
+    },
+    {
+        "plaka": "35DEF789",
+        "marka": "Audi",
+        "model": "A4",
+        "ucret": 900.0,
+        "durum": "m\u00fcsait",
+        "kiralayan": "",
+        "baslangic_tarihi": "",
+        "bitis_tarihi": ""
+    },
+    {
+        "plaka": "16GHI012",
+        "marka": "Volkswagen",
+        "model": "Passat",
+        "ucret": 650.0,
+        "durum": "m\u00fcsait",
+        "kiralayan": "",
+        "baslangic_tarihi": "",
+        "bitis_tarihi": ""
+    },
+    {
+        "plaka": "41JKL345",
+        "marka": "Renault",
+        "model": "Megane",
+        "ucret": 450.0,
+        "durum": "kirada",
+        "kiralayan": "Ay\u015fe Demir",
+        "baslangic_tarihi": "18-12-2025",
+        "bitis_tarihi": "25-12-2025"
+    },
+    {
+        "plaka": "07MNO678",
+        "marka": "Toyota",
+        "model": "Corolla",
+        "ucret": 550.0,
+        "durum": "m\u00fcsait",
+        "kiralayan": "",
+        "baslangic_tarihi": "",
+        "bitis_tarihi": ""
+    }
+]
